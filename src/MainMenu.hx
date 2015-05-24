@@ -13,14 +13,18 @@ class MainMenu extends FlxState
 
 	public function new() 
 	{
+		super();
+		
 		_btnSinglePlayer = new Button("Single Player");
 		_btnMultiplayer = new Button("Multiplayer");
 		_btnOptions = new Button("Options");
 		_btnExit = new Button("Exit");
 	}
 	
-	override public function draw():Void 
+	override public function create():Void 
 	{
+		super.create();
+		
 		var startTop:Float = 150;
 		var data:Array<Button> = [_btnSinglePlayer, _btnMultiplayer, _btnOptions, _btnExit];
 		for (i in data)
@@ -35,8 +39,6 @@ class MainMenu extends FlxState
 		add(_btnMultiplayer);
 		add(_btnOptions);
 		add(_btnExit);
-		
-		super.draw();
 	}
 	
 }

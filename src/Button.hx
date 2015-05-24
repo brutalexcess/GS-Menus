@@ -15,6 +15,8 @@ class Button extends FlxUIButton implements IGamepad
 	
 	public function new(labelText:String, ?assets:String = "") 
 	{	
+		super();
+		
 		label.text = labelText;
 		
 		if (assets != "")
