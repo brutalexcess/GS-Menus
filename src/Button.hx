@@ -1,10 +1,9 @@
 package;
 
 import flixel.addons.ui.FlxUIButton;
-import flixel.FlxBasic;
 import flixel.FlxSprite;
-import openfl.display.BitmapData;
-
+import flixel.FlxG;
+import openfl.Assets;
 
 class Button extends FlxUIButton implements IGamepad
 {
@@ -13,12 +12,13 @@ class Button extends FlxUIButton implements IGamepad
 	public var index:Int;
 	public var defaultGamepadKey:Int;
 	
-	public function new(value:String) 
-	{
-		var lbl = getLabel();
-		lbl.text = value;
+	
+	public function new(labelText:String, ?assets:String = "") 
+	{	
+		label.text = labelText;
 		
-		label.
+		if (assets != "")
+			loadGraphicsUpOverDown(Assets.getBitmapData(assets));
 	}
 	
 	override public function draw():Void 
@@ -26,6 +26,13 @@ class Button extends FlxUIButton implements IGamepad
 		
 		
 		super.draw();
+	}
+	
+	override public function update():Void 
+	{
+		
+			
+		super.update();
 	}
 	
 }
