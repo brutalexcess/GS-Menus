@@ -7,7 +7,6 @@ import openfl.Lib;
 class Main extends Sprite 
 {
 	
-	
 	private var _flixel:FlxGame;
 
 	public function new() 

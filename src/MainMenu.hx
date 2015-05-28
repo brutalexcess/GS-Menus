@@ -2,43 +2,25 @@ package;
 import flixel.FlxState;
 import flixel.FlxBasic;
 import flixel.FlxG;
+import flixel.addons.ui.FlxUIState;
+import flixel.addons.ui.interfaces.IFlxUIWidget;
 
-class MainMenu extends FlxState
+class MainMenu extends FlxUIState
 {
-	
-	private var _btnSinglePlayer:Button;
-	private var _btnMultiplayer:Button;
-	private var _btnOptions:Button;
-	private var _btnExit:Button;
-
-	public function new() 
-	{
-		super();
-		
-		_btnSinglePlayer = new Button("Single Player");
-		_btnMultiplayer = new Button("Multiplayer");
-		_btnOptions = new Button("Options");
-		_btnExit = new Button("Exit");
-	}
 	
 	override public function create():Void 
 	{
+		FlxG.cameras.bgColor = 0x000000;
+		FlxG.log.redirectTraces = false;
+		
+		_xml_id = "main_menu";
+		
 		super.create();
+	}
+	
+	public override function getEvent(name:String, sender:IFlxUIWidget, data:Dynamic, ?params:Array<Dynamic>):Void
+	{
 		
-		var startTop:Float = 150;
-		var data:Array<Button> = [_btnSinglePlayer, _btnMultiplayer, _btnOptions, _btnExit];
-		for (i in data)
-		{
-			i.setSize(400, 60);
-			i.y = startTop;
-			i.x = FlxG.width / 2 - i.width / 2;
-			startTop += 65;
-		}
-		
-		add(_btnSinglePlayer);
-		add(_btnMultiplayer);
-		add(_btnOptions);
-		add(_btnExit);
 	}
 	
 }

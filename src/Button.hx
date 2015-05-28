@@ -15,9 +15,7 @@ class Button extends FlxUIButton implements IGamepad
 	
 	public function new(labelText:String, ?assets:String = "") 
 	{	
-		super();
-		
-		label.text = labelText;
+		super(0, 0, labelText);
 		
 		if (assets != "")
 			loadGraphicsUpOverDown(Assets.getBitmapData(assets));
@@ -30,11 +28,11 @@ class Button extends FlxUIButton implements IGamepad
 		super.draw();
 	}
 	
-	override public function update():Void 
+	override public function update(elapsed:Float):Void 
 	{
 		
-			
-		super.update();
+		
+		super.update(elapsed);
 	}
 	
 }

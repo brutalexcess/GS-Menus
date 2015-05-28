@@ -31,7 +31,7 @@
     <option noInlineOnDebug="False" />
     <option mainClass="ApplicationMain" />
     <option enabledebug="True" />
-    <option additional="--remap flash:openfl&#xA;--remap flash:flash" />
+    <option additional="--remap flash:openfl&#xA;-debug &#xA;--remap flash:flash" />
   </build>
   <!-- haxelib libraries -->
   <haxelib>

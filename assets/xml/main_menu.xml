@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+
+	<definition id="button_id" width="200" height="50">
+		<graphic id="up" image="ui/button_up.png" slice9="10, 10, 190, 40" />
+		<graphic id="over" image="ui/button_over.png" slice9="10, 10, 190, 40" />
+		<graphic id="down" image="ui/button_down.png" slice9="10, 10, 190, 40" />
+	</definition>
+	
+    <button id="single_player" use_def="button_id" x="250" y="50" label="Single Player" />
+	<button id="multiplayer" use_def="button_id" x="250" y="105" label="Multiplayer" />
+	<button id="options" use_def="button_id" x="250" y="160" label="Options" />
+	<button id="exit" use_def="button_id" x="250" y="215" label="Exit" />
+	
+</data>
